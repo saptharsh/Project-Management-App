@@ -35,7 +35,10 @@ if (isset($_REQUEST['run'])) {
 }
 
 ?>
+
+<b><?php echo $this->msg; ?></b><br/>
 <b><?php echo @htmlentities($_GET['msg']); ?></b>
+
 <form method="post" action="?run">
 <p><label>Name</label>
     <input type="text" name="name" /></p>

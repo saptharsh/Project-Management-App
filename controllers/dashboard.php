@@ -5,19 +5,7 @@ class Dashboard extends Controller{
     function __construct() {
         
         parent::__construct();
-        Session::init();
-        $logged = Session::get('loggedIn');
-        if( $logged == false) {
-            Session::destroy();
-            header('location: login');
-            /*
-             * header('location: ../login');
-             * For example, If the user tries to enter without logging in: http://localhost:7770/mvc/dashboard
-             *      The user would be directed to http://localhost:7770/login
-             *      Hence, changed the header method
-             */
-            exit();
-        }
+        Auth::checkedLogged();
         /*
          * Checking the SESSION variables which are set
          */

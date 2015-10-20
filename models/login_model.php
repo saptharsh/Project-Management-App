@@ -21,7 +21,7 @@ class Login_Model extends Model{
          * The Obj returned by $statement was 'Array of Arrays'
          */
         
-        $result = $statement->fetchAll();//$statement returns an object 
+        $result = $statement->fetchAll();//$statement returns an Array of objects 
         //print_r($result);
         //echo '</br>';
         $data = $result['0'];
@@ -32,6 +32,7 @@ class Login_Model extends Model{
         if($count > 0){
             //log in the user
             Session::init();
+            Session::set('userid', $data['id']);
             Session::set('role', $data['role']);
             Session::set('loggedIn', true);
             header('location: ../dashboard');

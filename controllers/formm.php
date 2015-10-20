@@ -9,6 +9,7 @@ class Formm extends Controller {
     //default page
     public function index() {
 
+        $this->view->msg = "Fill out the Form:";
         $this->view->render('form/index');
         //$form = new Form();
     }

@@ -57,7 +57,7 @@ form label {
 	text-align: right; 
 }
 
-form input, form select {
+form input, form select, form textArea {
 	width: auto;
 	margin: 5px 0 0 10px;
 	border: 1px solid gray;
