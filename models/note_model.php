@@ -12,7 +12,7 @@ class Note_Model extends Model{
     public function noteList(){
         
         return $this->db->select('SELECT * FROM note WHERE user_id = :user_id', 
-                array('user_id' => $_SESSION['userid']));
+                array(':user_id' => $_SESSION['userid']));
         /*
         $sth = $this->db->prepare('SELECT id,login,role FROM users');
         $sth->execute();
@@ -23,8 +23,8 @@ class Note_Model extends Model{
     
     public function getNote($id){
         
-        return $this->db->select('SELECT * FROM note WHERE user_id = :user_id AND id = :id',
-                array('user_id' => $_SESSION['userid'], ':id' => $id));
+        return $this->db->select('SELECT * FROM note WHERE user_id = :user_id AND noteid = :id',
+                array(':user_id' => $_SESSION['userid'], ':id' => $id));
         
         /*
         $sth = $this->db->prepare('SELECT id,login,role FROM users WHERE id = :id');
@@ -42,11 +42,13 @@ class Note_Model extends Model{
     
     public function RunCreate($data){
         
+        // Use GMT / UTC for grabbing different time-zones (DATE)
+        
         $this->db->insert('note', array(
             'title' => $data['title'],
             'user_id' => $_SESSION['userid'],
             'content' => $data['content'],
-            'date_added' => ''
+            'date_added' => date("Y-m-d H:i:s")  
         ));
         
         //die;
@@ -65,7 +67,7 @@ class Note_Model extends Model{
     public function RunDelete($id){
         
         
-        $this->db->delete('users', "id = $id AND user_id = {$_SESSION['userid']}");
+        $this->db->delete('note', "noteid = $id AND user_id = {$_SESSION['userid']}");
         /*
         $sth = $this->db->prepare('DELETE FROM users WHERE id = :id');
         $sth->execute(array(
@@ -89,7 +91,7 @@ class Note_Model extends Model{
         );
         
         //Wasn't working for a while when the "id" was not surrounded by BACKTICKS
-        $this->db->update('users', $postData , "`id` = {$data['id']} 
+        $this->db->update('note', $postData , "`noteid` = {$data['id']} 
                                 AND user_id = {$_SESSION['userid']}");
         
         /*

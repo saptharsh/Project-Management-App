@@ -11,7 +11,8 @@ class Note extends Controller{
         //print_r($_SESSION);
         
         //Setting a JavaScript variable to the view
-        $this->view->js = array('users/js/jqueryui.js');
+        $this->view->js = array('note/js/confirm.js');
+        
         
     }
 
@@ -60,17 +61,18 @@ class Note extends Controller{
             'title' => $_POST['title'],
             'content' => $_POST['content']
         );
+        $data['id'] = $id;
         
         //Do the Error checking
         
         $this->model->RunEditSave($data);
         
-        header('location: ' . URL . 'users');
+        header('location: ' . URL . 'note');
     }
 
     public function delete($id){
         $this->model->RunDelete($id);
-        header('location: ' . URL . 'users');
+        header('location: ' . URL . 'note');
     }
 }
 
