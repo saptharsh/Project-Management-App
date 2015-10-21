@@ -41,7 +41,7 @@ class Dashboard_Model extends Model {
     function RunXhrDeleteListing(){
         $id = (int) $_POST['id']; /* Type casting, from which user can't inject any harmful SQL */
         
-        $this->db->delete('savedate', "id = '$id'");//Delete() doesn't have a prepared statement
+        $this->db->delete('savedata', "id = '$id'");//Delete() doesn't have a prepared statement
         
         /*
         $stmnt = $this->db->prepare('DELETE FROM savedata WHERE id ="'.$id.'"');
