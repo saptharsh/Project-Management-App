@@ -57,35 +57,6 @@ class Database extends PDO{
         
     }
 
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     /**
      * 
      * @param string $table, A name of table to insert into 
@@ -161,19 +132,4 @@ class Database extends PDO{
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

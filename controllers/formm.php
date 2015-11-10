@@ -1,9 +1,10 @@
 <?php
-Session::init();
+//Session::init();
 class Formm extends Controller {
 
     function __construct() {
         parent::__construct();
+        Auth::checkedLogged();
     }
 
     //default page

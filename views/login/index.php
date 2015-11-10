@@ -1,21 +1,21 @@
+<h3>Login <small>No account? <a>register here !</a></small></h3>
 
-<hr/>
-<p>inside views/login/index.php</p>
-<?php echo $this->msg; ?>
-<h1>Login</h1>
+<div class="row">
+    <div class="large-8 medium-8 columns">
 
-<form action="login/run" method="POST">
-    
-    <label>User Name</label>
-        <input type="text" name="user"/></br> 
-    <label>Password</label>    
-        <input type="password" name="pass"/></br> 
-    <label></label>    
-        <input type="submit"/>
-</form>
+        <form action="login/run" method="POST">
+            <div class="row">
+                <div class="large-4 columns">
 
+                    <label>User Name</label>
+                    <input type="text" name="user"/></br> 
+                    <label>Password</label>    
+                    <input type="password" name="pass"/></br> 
+                    <label></label>    
+                    <input type="submit" class="small button" />
 
-
-<hr/>
-
-
+                </div>    
+            </div>
+        </form>    
+    </div>    
+</div>        

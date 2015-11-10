@@ -13,6 +13,8 @@ class Users extends Controller{
         //Setting a JavaScript variable to the view
         $this->view->js = array('users/js/jqueryui.js');
         
+        
+        
     }
 
     public function index(){
@@ -24,6 +26,9 @@ class Users extends Controller{
         $this->view->msg = "CRUD without AJAX</br>";
         $this->view->title = "Add new users to the Application<br/>";
         $this->view->usersList = $this->model->usersList();//Controller grabbing from Model and giving it to View
+        //$check = array();
+        //$check = $this->model->usersList();
+        //print_r($check);
         $this->view->render('users/index');
     }
     

@@ -15,9 +15,9 @@ class View {
              */
             require 'views/' .$name. '.php';
         } else{
-            require 'views/header.php';
+            require 'views/newHeader.php';
             require 'views/' .$name. '.php';
-            require 'views/footer.php';
+            require 'views/newFooter.php';
 
         }
     }

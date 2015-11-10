@@ -23,6 +23,7 @@ class Login_Model extends Model{
         
         $result = $statement->fetchAll();//$statement returns an Array of objects 
         //print_r($result);
+        //die();
         //echo '</br>';
         $data = $result['0'];
         //print_r($data);

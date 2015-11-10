@@ -1,9 +1,12 @@
+<div class="row">
+    <div class="large-6 columns">
 
-
-<h1>Users</h1>
-<h2>Welcome <?php echo $this->welocmeMsg; ?> </h2>
+<h4>Users</h4>
+<h4>Welcome <?php echo $this->welocmeMsg; ?> </h4>
 
 <input id="jQueryUItest" />
+Date: <input type="text" id="dp" onclick="$('#dp').datepicker();$('#dp').datepicker('show');">
+<p>Click test</p>
 <br/>
 <br/>
 &nbsp;
@@ -21,6 +24,8 @@
     <label>&nbsp;</label><input type="submit" />
     <!-- &nbsp; No braking space-->
 </form>
+    </div>
+</div>
 <hr/>
 <table>
     <td>ID</td><td>UserName</td><td>Role</td> 

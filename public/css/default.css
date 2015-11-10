@@ -9,24 +9,42 @@ body {
 	padding: 20px;
 	background: #12407f;
 	color: #fff;
+        /*
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
 	border-bottom: 4px solid #436fac;
+        */
 }
 
 #content {
-	background: #fff;
-	padding: 20px;
-        min-height: 500px;
+	
+        background: #fff;
+	/* padding: 20px; */
+         min-height: 500px; 
+}
+
+.content-height {
+        width: 100%;
+    	background: #eee;
+	/* padding: 20px; */
+         min-height: 500px; 
+
+}
+
+.content-sidebar {
+    background: #fff;
+    
 }
 
 #footer {
 	background: #12407f;
 	color: #fff;
 	padding: 20px;
+        /*
 	border-top: 4px solid #436fac;
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
+        */
 }
 
 /* Links */
@@ -48,16 +66,15 @@ form {
 	font: 100% verdana,arial,sans-serif;
 }
 
-form label {
-	display: block;
-	float: left; 
-	width: 150px; 
-	padding: 0; 
-	margin: 9px 0 0;
-	text-align: right; 
+
+form input[type=checkbox] {
+    width: auto;
+    border: 1px solid gray;
+    padding: 4px;
 }
 
-form input, form select, form textArea {
+
+form input, form textArea {
 	width: auto;
 	margin: 5px 0 0 10px;
 	border: 1px solid gray;
