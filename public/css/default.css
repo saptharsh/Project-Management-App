@@ -88,7 +88,7 @@ form input[type=submit]:hover {
 
 
 form br {clear: left;}
-
+/*
 table, td, th {
     border: 1px solid black;
     padding: 5px;
@@ -97,7 +97,11 @@ table, td, th {
 table {
     width: 50%;
 }
+*/
 
+table td {
+    
+}
 
 .del {
     color: black;

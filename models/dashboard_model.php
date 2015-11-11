@@ -49,6 +49,39 @@ class Dashboard_Model extends Model {
          * 
          */
     }
+    
+    function InsertProjDetails($data) {
+        //echo 'hey<br/>';
+        print_r($data);
+        
+        
+        
+        //echo '<br/>after unserialising<br/>';
+        //print_r(unserialize($data['onshore_team']));
+        
+        
+        $this->db->insert('project_details', array(
+            'proj_name' => $data['proj_name'],
+            'departments' => $data['departments'],
+            'proj_num' => $data['proj_num'],
+            'proj_start' => $data['proj_start'],
+            'offshore' => $data['offshore'],
+            'prod_support' => $data['prod_support'],
+            'offshore_lead' => $data['offshore_lead'],
+            'offshore_team' => $data['offshore_team'],
+            'proj_lead' => $data['proj_lead'],
+            'onshore_team' => $data['onshore_team'],
+            'proj_dur' => $data['proj_dur'],
+            'end_date' => $data['end_date']
+        ));
+        
+        //die();
+        /*
+         * proj_name, departments, proj_num, proj_start, offshore, prod_support,
+         * offshore_lead, offshore_team, proj_lead, onshore_team, proj_dur, team_count
+         */
+        
+    }
 }
 
 
